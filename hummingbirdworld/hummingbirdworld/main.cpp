@@ -46,16 +46,16 @@ float birdViewW = winWidth, birdViewH = 700.0 / 7 * 5; // size of window for Wor
 													   
 DebugMsg testMsg;	// use to debug on console
 // set up data & aerial panels at top of screen and control panels at bottom
-DataPanel panel1(0.0, winWidth / 5, winHeight);
-DataPanel panel2(winWidth / 5, 2 * (winWidth / 5), winHeight);
+DataPanel panel1(0.0, winWidth / 5, winHeight, CURRENTPOS);
+DataPanel panel2(winWidth / 5, 2 * (winWidth / 5), winHeight, ELAPSEDTIME);
 AerialView aerialView(2 * (winWidth / 5), 3 * (winWidth / 5), winHeight);
-DataPanel panel3(3 * (winWidth / 5), 4 * (winWidth / 5), winHeight);
-DataPanel panel4(4 * (winWidth / 5), winWidth, winHeight);
-ControlPanel cpanel1(0.0, winWidth / 5, winHeight);
-ControlPanel cpanel2(winWidth / 5, 2 * (winWidth / 5), winHeight);
-ControlPanel cpanel3(2 * (winWidth / 5), 3 * (winWidth / 5), winHeight);
-ControlPanel cpanel4(3 * (winWidth / 5), 4 * (winWidth / 5), winHeight);
-ControlPanel cpanel5(4 * (winWidth / 5), winWidth, winHeight);
+DataPanel panel3(3 * (winWidth / 5), 4 * (winWidth / 5), winHeight, NODOCKS);
+DataPanel panel4(4 * (winWidth / 5), winWidth, winHeight, OOBCOUNT);
+ControlPanel cpanel1(0.0, winWidth / 5, winHeight, DOCK);
+ControlPanel cpanel2(winWidth / 5, 2 * (winWidth / 5), winHeight, HEAD);
+ControlPanel cpanel3(2 * (winWidth / 5), 3 * (winWidth / 5), winHeight, DIRECTION);
+ControlPanel cpanel4(3 * (winWidth / 5), 4 * (winWidth / 5), winHeight, MOVE);
+ControlPanel cpanel5(4 * (winWidth / 5), winWidth, winHeight, OTHER);
 
 void init(void)
 {
@@ -128,11 +128,11 @@ void display(void)
 	glPushMatrix();
 	glLoadIdentity();
 
-	panel1.draw("Data Panel 1");
-	panel2.draw("Data Panel 2");
+	panel1.draw("Current Position");
+	panel2.draw("Total Elapsed Time");
 	aerialView.drawBackground();
-	panel3.draw("Data Panel 3");
-	panel4.draw("Data Panel 4");
+	panel3.draw("Number of Honeypot Docks");
+	panel4.draw("Out of Bounds Count");
 	cpanel1.draw("Dock Controls");
 	cpanel2.draw("Head Controls");
 	cpanel3.draw("Direction Controls");
