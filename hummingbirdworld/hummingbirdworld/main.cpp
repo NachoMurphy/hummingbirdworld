@@ -14,6 +14,8 @@
 #define YELLOW     6
 #define WHITE      7
 #define BLACK      8
+#define GOLD	   9
+#define GREY	   10
 
 const GLfloat Color[9][4] =
 { 0.0f, 0.0f, 0.0f, 1.0f,
