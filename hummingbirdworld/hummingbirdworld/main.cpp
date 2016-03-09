@@ -17,16 +17,18 @@
 #define GOLD	   9
 #define GREY	   10
 
-const GLfloat Color[9][4] =
+const GLfloat Color[11][4] =
 { 0.0f, 0.0f, 0.0f, 1.0f,
-1.0f, 0.0f, 0.0f, 1.0f, // red
-0.0f, 1.0f, 0.0f, 1.0f, // green
-0.0f, 0.0f, 1.0f, 1.0f, // blue
-0.55f, 0.27f, 0.07f, 1.0f, // brown
-1.0f, 0.0f, 1.0f, 1.0f, // magenta
-1.0f, 1.0f, 0.0f, 1.0f, // yellow
-1.0f, 1.0f, 1.0f, 1.0f, // white
-0.0f, 0.0f, 0.0f, 1.0f  // black
+1.0f, 0.0f, 0.0f, 1.0f,		// red
+0.0f, 1.0f, 0.0f, 1.0f,		// green
+0.0f, 0.0f, 1.0f, 1.0f,		// blue
+0.55f, 0.27f, 0.07f, 1.0f,	// brown
+1.0f, 0.0f, 1.0f, 1.0f,		// magenta
+1.0f, 1.0f, 0.0f, 1.0f,		// yellow
+1.0f, 1.0f, 1.0f, 1.0f,		// white
+0.0f, 0.0f, 0.0f, 1.0f,		// black
+1.0f, 0.8f, 0.0f, 1.0f,		// gold
+0.8f, 0.8f, 0.8f, 1.0f		// grey
 };
 
 
